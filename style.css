@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --first-color:#883D1A;
+    --second-color:#2A160C;
+}
+
+section{
+    padding: 80px ;
+}
+
+
+::selection{
+    color: #fff;
+    background: var(--first-color);
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 41px rgb(14 55 54 /14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+.logo img{
+    width: 45px;
+    align-items: center;
+    position: relative;
+    top: 0%;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover{
+    color: var(--first-color);
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    display: none;
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #d7aeae;
+    gap: 17rem;
+    overflow: hidden;
+}
+
+.home-txt{
+    flex: 1 1 17rem;
+}
+
+.home-img{
+    flex: 1 1 17rem;
+}
+
+.home-img img{
+    animation: animate 3s linear infinite;
+    width: 40%;
+    position: relative;
+    top: 3rem;
+    width: 100%;
+}
+
+@keyframes animate{
+    0% {
+        transform: translate(-11px);
+    }
+    50%{
+        transform: translate(11px)
+    }
+    100%{
+        transform: translate(-11px);
+    }
+}
+
+.home-txt span{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.home-txt h1{
+    font-size: 3.7rem;
+    color: var(--first-color);
+    font-weight:bolder ;
+}
+
+.home-txt h2{
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--second-color);
+    text-transform: uppercase;
+    margin:1rem 0 1.4rem;
+}
+
+.btn{
+    padding: 7px 16px;
+    border: 2px solid var(--second-color);
+    color: var(--second-color) ;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.btn:hover{
+    color: #fff;
+    background: var(--second-color);
+}
+
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.heading h1{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.shop-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.shop-container .box{
+    flex: 1 1 10rem;
+    background: var(--first-color);
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+}
+
+.shop-container .box .box-img{
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+}
+
+.shop-container .box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+    top: 0rem;
+}
+
+.stars{
+    margin: 1rem 0 0.1rem;
+}
+
+.shop-container .box .stars .bx{
+    color: #ebdbc8;
+}
+
+.shop-container .box  h2{
+    color: #ebdbc8;
+    font-size: 1.3rem;
+}
+
+.shop-container .box  span{
+    color: #ebdbc8;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.2rem 0 0.5rem;
+}
+
+.box .btn{
+    border: 2px solid #ebdbc8;
+    color: #ebdbc8;
+}
+
+.box .btn:hover{
+    background: #ebdbc8;
+    color: var(--second-color);
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.delivery{
+    height: 490px;
+}
+
+.delivery-img,
+.app-img{
+    flex: 1 1 21rem;
+}
+
+.app-img img{
+    margin: 0 0 0 5rem;
+}
+
+.delivery-img img{
+    position: relative;
+    bottom: 3rem;
+}
+
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+.delivery-text p, .app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ebdbc8;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.about-img{
+    flex: 1 1 17rem;
+}
+
+.about-img img{
+    position: relative;
+    top: 0rem;
+    width: 60%;
+}
+
+.about-text{
+    flex: 1 1 17rem;
+}
+
+.about-text h1{
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+.about-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+
+.social a .bx{
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    border-radius: 50%;
+}
+
+.social a .bx:hover{
+    background: var(--first-color);
+}
+
+.links{
+    margin: 1rem 0 1rem;
+}
+
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+
+.links a:hover{
+    color: var(--first-color);
+}
+
+.contact p{
+    text-align: center;
+}
+
+@media (max-width:1200px){
+    header{
+        padding: 18px 7%;
+    }
+
+    section{
+        padding:80px;
+    }
+
+    .home-txt h1{
+        font-size: 3rem;
+    }
+
+    .home-txt h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:992px){
+    header{
+        padding: 18px 4%;
+    }
+
+    .home{
+        padding-bottom: 20px ;
+    }
+
+    .home-txt{
+        position: relative;
+        top: 3rem;
+        text-align: center;
+    }
+
+    .home-img{
+        position: relative;
+        bottom: 10rem;
+    }
+
+    .home-img img{
+        position: relative;
+        /* bottom: 20rem; */
+        width: 70%;
+        left:7.5rem;
+    }
+
+    section{
+        padding: 100px;
+    }
+
+    .container{
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media (max-width:768px){
+    
+    header{
+        padding: 18px 4%;
+    }
+
+    
+
+    #menu-icon{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(14 55 54/14%);
+        border-top: 2px solid var(--first-color);
+        transition: 0.2s;
+        text-align: left;
+    }
+
+    .navbar.active{
+        top: 100%;
+    }
+
+    .navbar a{
+        padding: 1.5rem;
+        display: block ;
+        color: var(--second-color);
+    }
+
+    .heading h1{
+        font-size: 1.5rem;
+    }
+
+    .heading span{
+        font-size: 0.9rem;
+    }
+
+    .home-img{
+        position: relative;
+        right:2rem;
+    }
+
+    .home-txt span{
+        font-size: 0.9rem;
+    }
+
+    .home-txt h1{
+        font-size: 2.4rem;
+    }
+
+    .home-txt h2{
+        font-size: 1.2rem;
+    }
+
+    .home-txt{
+        padding-top: inherit;
+    }
+
+    .shop-container .box{
+        margin-top: 6rem;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .delivery-text{
+        position: relative;
+        bottom: 3rem;
+    }
+
+    .app{
+        position: relative;
+        top: 10rem;
+    }
+
+    .app-img{
+        position: relative;
+        bottom: 3rem;
+    }
+
+    .app .container{
+        width: 100%;
+    }
+
+
+    .about-img{
+        position: relative;
+        width: 120%;
+        left: 4rem;
+    }
+
+    .about-text{
+        position: relative;
+        right: 0.5rem;
+        justify-content: center;
+    }
+
+    .about-text h2{
+        text-align: center;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width: 600px){
+
+    .home-img{
+        position: relative;
+        right: 5rem;
+    }
+
+    .shop-container{
+        margin-top: 30px;
+    }
+
+    .delivery{
+        padding-top: 30px;
+    }
+
+    .delivery .heading h2{
+        font-size: 1.2rem;
+    }
+
+    .delivery-img{
+        height: 100px;
+    }
+
+    .delivery-text h2{
+        text-align: center;
+    }
+
+    .delivery-text .btn{
+        font-size: 0.8rem;
+    }
+
+    .app{
+        padding-top: 30px;
+    }
+
+    .app .heading h2{
+        font-size: 1.2rem;
+    }
+
+    .app-text h2{
+        text-align: center;
+    }
+
+    .app-text .btn{
+        font-size: 0.8rem;
+    }
+
+    .app-img{
+        position: relative;
+        bottom: 1.5rem;
+        right: 5rem;
+    }
+
+    .about{
+        padding-top: 50px;
+    }
+
+    .about-img img{
+        position: relative;
+        right: 1.5rem;
+    }
+
+    .about-text .btn{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 390px){
+
+    .home-img{
+        position: relative;
+        right: 7rem;
+    }
+
+    .home-img img{
+        width: 100%;
+    }
+
+    .shop-container{
+        justify-content: center;
+    }
+
+    .delivery{
+        padding-top: 30px;
+    }
+
+    .delivery .container{
+        width: 190px;
+        text-align: center;
+    }
+
+    .delivery-text h2{
+        font-size: 1.1rem;
+    }
+
+    .delivery .heading  h2{
+        font-size: 1rem;
+        
+    }
+
+    .app{
+        padding-top: 50px;
+    }
+
+    .app .container{
+        margin-top: 1rem;
+        width: 190px;
+        text-align: center;
+    }
+
+    .app .heading h2{
+        font-size: 1rem;
+    }
+
+    .app-text h2{
+        font-size: 1.1rem;
+    }
+
+    .app-text{
+        text-align: center;
+        align-items: center;
+    }
+    
+
+    .app-img{
+        position: relative;
+        bottom: 1rem;
+        right: 5rem;
+    }
+
+    .about{
+        padding-top: 30px;
+    }
+
+    .about-img img{
+        width: 100%;
+        position: relative;
+        right: 4rem;
+    }
+
+    .about-text{
+        text-align: center;
+    }
+
+    .social a{
+        font-size: 15px;
+        margin: 0rem;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links a{
+        width: 100px;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 290px){
+    .home-img{
+        right: 8rem; /* Adjust as needed */
+    }
+
+    .home-img img{
+        width: 180%; 
+        position:relative;
+        ri
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shop-container{
+        justify-content: center;
+    }
+
+    .delivery{
+        padding-top: 30px;
+    }
+
+    .delivery .container{
+        width: 200px;
+        text-align: center;
+        position: relative;
+        right: 3.5rem; /* Adjust as needed */
+    }
+
+    .delivery .heading h2{
+        font-size: 0.7rem;
+    }
+
+    .app .heading h2{
+        font-size: 0.8rem;
+    
+    }
+
+    .app .container{
+        width: 200px;
+        text-align: center;
+        position: relative;
+        right: 3.5rem; /* Adjust as needed */
+    }
+
+    .app-img{
+        position: relative;
+        bottom: 1rem; /* Adjust as needed */
+        right: 5rem; /* Adjust as needed */
+    }
+
+    .about{
+        padding-top: 30px;
+    }
+
+    .about-img{
+        width: 120%; /* Adjust as needed */
+    }
+}
